@@ -1,0 +1,114 @@
+{%load static%}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourism</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            font-size: 16px;
+            font-family: "Lato", sans-serif;
+            font-weight: 400;
+            line-height: 1.8em;
+            color: #666;
+        }
+        
+        body {
+            background-image: url(".imag/back.jpg");
+            background-color: #cccccc;
+            /* background-position: center center; */
+            /* background-repeat:repeat; */
+            background-size: cover;
+            /* overflow: hidden; */
+            /* background-attachment: fixed; */
+        }
+        
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: stretch;
+        }
+        
+        .card {
+            flex: 0 0 200px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+        }
+        
+        .card img {
+            max-width: 100%;
+        }
+        
+        .card .text {
+            padding: 0 20px 20px;
+        }
+        
+        .card .text>button {
+            background: gray;
+            border: 0;
+            color: white;
+            padding: 10px;
+            width: 100%;
+        }
+        
+        article {
+            height: 300px;
+            width: 200px;
+        }
+        
+        div {
+            padding: 5px;
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+    <div class="container">
+
+
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4 text-success">{{ nearCity }}</h1>
+                <h4 class="text-primary">Air distance: {{ distance }}km </h4>
+                <p class="text-dark ">{{ wiki_result }}</p>
+            </div>
+        </div>
+
+        <div class="row">
+            {% for n in images_array %}
+            <div class="col-4">
+                <img src="{{ n }}" height="80%" width="80%">
+            </div>
+            {% endfor %}
+        </div>
+
+
+
+    </div>
+
+
+</body>
+
+</html>

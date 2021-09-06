@@ -1,0 +1,111 @@
+{%load static%}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourism</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static '/selfp.css' %}">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            $("#loading").hide()
+
+            $("#add_btn").click(function() {
+                $("#loading").show()
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <div class="pim1">
+        <div class=ptext>
+            <form action="placeNear" method="POST">
+                {% csrf_token %}
+                <div id="add" class="container custom-scrollbar form-group">
+                    <input type="text" id="input" placeholder="Enter your place..." name='city' class="form-control">
+                    <button class="btn btn-primary" type="submit" id="add_btn">Search</button>
+                </div>
+            </form>
+            <span>
+                Let's know about famous cities
+            </span>
+            <div style="height: 20px;"></div>
+            <h3 id='loading' style="color: blueviolet;">Fetching data, Please wait a min...</h3>
+        </div>
+    </div>
+
+    <div class="pim2">
+        <div class="ptext">
+            <span>
+                Paris
+            </span>
+        </div>
+    </div>
+    <section class="section city1">
+        <h2>Capital of france</h2>
+        <p>Paris (French pronunciation: ​[paʁi] (About this soundlisten)) is the capital and most populous city of France, with an estimated population of 2,175,601 residents as of 2018, in an area of more than 105 square kilometres (41 square miles).[4]
+            Since the 17th century, Paris has been one of Europe's major centres of finance, diplomacy, commerce, fashion, gastronomy, science and arts. The City of Paris is the centre and seat of government of the Île-de-France, or Paris Region, which
+            has an estimated population of 12,174,880, or about 18 percent of the population of France as of 2017.[5] The Paris Region had a GDP of €709 billion ($808 billion) in 2017.[6] According to the Economist Intelligence Unit Worldwide Cost of
+            Living Survey in 2018, Paris was the second most expensive city in the world, after Singapore, and ahead of Zürich, Hong Kong, Oslo and Geneva.[7] Another source ranked Paris as most expensive, on a par with Singapore and Hong Kong, in 2018.</p>
+        <a href="https://en.wikipedia.org/wiki/Paris#History" class="know">Discover More</a>
+    </section>
+
+    <div class="pim3">
+        <div class="ptext">
+            <span>
+                London
+            </span>
+        </div>
+    </div>
+    <section class="section city2">
+        <h2>Capital Of UK</h2>
+        <p>London is the capital and largest city of England and the United Kingdom.[8][9] The city stands on the River Thames in the south-east of England, at the head of its 50-mile (80 km) estuary leading to the North Sea. London has been a major settlement
+            for two millennia, and was originally called Londinium, which was founded by the Romans.[10] The City of London, London's ancient core and financial centre—an area of just 1.12 square miles (2.9 km2) and colloquially known as the Square Mile—retains
+            boundaries that closely follow its medieval limits.[note 1][11][12][13][14][15] The adjacent City of Westminster has for centuries been the location of much of the national government. Thirty-one additional boroughs north and south of the
+            river also comprise modern London. The London region is governed by the mayor of London and the London Assembly.
+        </p>
+        <a href="https://en.wikipedia.org/wiki/London#History" class="know">Discover More</a>
+    </section>
+
+    <div class="pim4">
+        <div class="ptext">
+            <span>
+                Delhi
+            </span>
+        </div>
+    </div>
+    <section class="section city3">
+        <h2>Capital Of India</h2>
+        <p>Delhi (English: /ˈdɛli/; Hindi: [ˈdɪlːiː] Dillī; Punjabi: [ˈdɪlːiː] Dillī; Urdu: [ˈdɛɦliː] Dêhlī),[15] officially the National Capital Territory (NCT) of Delhi, is a city and a union territory of India containing New Delhi, the capital of India.[16][17]
+            It is bordered by the state of Haryana on three sides and by Uttar Pradesh to the east. The NCT covers an area of 1,484 square kilometres (573 sq mi).[5] According to the 2011 census, Delhi's city proper population was over 11 million,[6]
+            the second-highest in India after Mumbai,[18] while the whole NCT's population was about 16.8 million.[7] Delhi's urban area is now considered to extend beyond the NCT boundaries, and include the neighbouring satellite cities of Ghaziabad,
+            Faridabad, Gurgaon and Noida in an area called the National Capital Region (NCR) and had an estimated 2016 population of over 26 million people, making it the world's second-largest urban area according to the United Nations.[8] Recent estimates
+            of the metro economy of its urban area have ranked Delhi either the most or second-most productive metro area of India.[11][19] Delhi is the second-wealthiest city in India after Mumbai and is home to 18 billionaires and 23,000 millionaires.[20]
+            Delhi ranks fifth among the Indian states and union territories in human development index.[13] Delhi has the second-highest GDP per capita in India.[10] Delhi is of great historical significance as an important commercial, transport, and
+            cultural hub, as well as the political centre of India.</p>
+        <a href="https://en.wikipedia.org/wiki/Delhi#History" class="know">Discover More</a>
+    </section>
+
+    <div class="pim1">
+        <div class=ptext>
+            <span>
+                That's All
+            </span>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

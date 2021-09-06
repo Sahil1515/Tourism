@@ -1,0 +1,99 @@
+body,html{
+    height: 100%;
+    margin: 0;
+    font-size: 16px;
+    font-family: "Lato",sans-serif;
+    font-weight: 400;
+    line-height: 1.8em;
+    color: #666;
+}
+
+span{
+    color: black;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: bolder;
+}
+
+#add {
+    /* background-color: violet; */
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#add_btn{
+    padding: 5px;
+    color: black ;
+    border: black 1px solid;
+    font-size: large;
+    font-weight: bolder;
+    margin: 3px;
+    border-radius: 10px;
+}
+#add_btn:hover{
+    color: white;
+}
+
+.pim1,.pim2,.pim3,.pim4{
+    position: relative;
+    opacity: 0.70;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.pim1{
+    background-image: url(imag/city.jpg);
+    min-height: 100%;
+}
+.pim2{
+    background-image: url(imag/paris.jpg);
+    min-height: 400px;
+}
+.pim3{
+    background-image: url(imag/london.jpg);
+    min-height: 400px;
+}
+.pim4{
+    background-image: url(imag/delhi.jpg);
+    min-height: 400px;
+}
+.ptext{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    font-size: 27px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+
+.ptext .border{
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    padding: 5px;
+
+}
+.section{
+    text-align: center;
+    padding: 50px 80px;
+}
+.city1{
+    background-color: #f4f4f4;
+    color: #666;
+}
+.city2{
+    background-color: #282e34;
+    color: #ddd;
+}
+.city3{
+    background-color:lightgoldenrodyellow;
+    color: #666;
+
+}
+@media(max-width:568px){
+    .pim1,.pim2,.pim3,.pim4{
+        background-attachment: scroll;
+    }
+}
